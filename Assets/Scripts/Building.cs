@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Building : MonoBehaviour
@@ -7,7 +10,7 @@ public class Building : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private Collider _collider;
     [SerializeField] private int _obstaclesTriggering = 0;
-    
+    [SerializeField]  private List<Material> _materials;
     #endregion
 
     #region Unity Actions
@@ -42,6 +45,12 @@ public class Building : MonoBehaviour
             return false;
         _collider.isTrigger = false;
         return true;
+    }
+
+    [Button]
+    void ExtractMaterials()
+    {
+        _materials = GetComponentsInChildren<Renderer>().Select(i=>i.sharedMaterial).ToList();
     }
 
     #endregion
