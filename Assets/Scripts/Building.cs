@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Building : MonoBehaviour
@@ -8,7 +7,7 @@ public class Building : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private Collider _collider;
     [SerializeField] private int _obstaclesTriggering = 0;
-
+    
     #endregion
 
     #region Unity Actions
