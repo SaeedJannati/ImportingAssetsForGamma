@@ -7,7 +7,7 @@ public class CameraSwipeMove : MonoBehaviour
     #region Fields
 
     private Camera _mainCam;
-    [SerializeField] private Vector3 _lastPos;
+    private Vector3 _lastPos;
 
     #endregion
 
