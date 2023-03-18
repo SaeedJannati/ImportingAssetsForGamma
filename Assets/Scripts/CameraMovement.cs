@@ -1,5 +1,3 @@
-using System;
-using Lean.Touch;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -9,10 +7,8 @@ public class CameraMovement : MonoBehaviour
     private Vector3 xAxis;
     private Vector3 yAxis;
     [SerializeField] private float moveSpeed = 3.0f;
-    [SerializeField] private Collider _cameraBound;
     [SerializeField] private Transform _camTransform;
     [SerializeField] private CameraSwipeMove _cameraSwipeMove;
-    [SerializeField] private LeanPinchCamera _cameraPinch;
 
     #endregion
 

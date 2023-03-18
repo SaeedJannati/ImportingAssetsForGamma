@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170815547}
-  m_IndirectSpecularColor: {r: 0.08033487, g: 0.09972586, b: 0.30112633, a: 1}
+  m_IndirectSpecularColor: {r: 0.080514476, g: 0.099901885, b: 0.30117393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1222,10 +1222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  _cameraBound: {fileID: 1275153155}
   _camTransform: {fileID: 206873316}
   _cameraSwipeMove: {fileID: 1179855890}
-  _cameraPinch: {fileID: 0}
 --- !u!1001 &252141292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2652,7 +2650,7 @@ PrefabInstance:
     - target: {fileID: 1601693967802005805, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2333152634366561086, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -4813,6 +4811,7 @@ GameObject:
   - component: {fileID: 1179855892}
   - component: {fileID: 1179855891}
   - component: {fileID: 1179855890}
+  - component: {fileID: 1179855893}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4852,7 +4851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458c426ed430ea468978c36114f35db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lastPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1179855891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4891,6 +4889,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179855888}
   m_CullTransparentMesh: 1
+--- !u!114 &1179855893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179855888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1179855890}
+          m_TargetAssemblyTypeName: CameraSwipeMove, Assembly-CSharp
+          m_MethodName: OnBeginDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1179855890}
+          m_TargetAssemblyTypeName: CameraSwipeMove, Assembly-CSharp
+          m_MethodName: OnDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!33 &1221586780
 MeshFilter:
   m_ObjectHideFlags: 0
