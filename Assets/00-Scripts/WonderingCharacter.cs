@@ -147,7 +147,7 @@ public class WonderingCharacter : MonoBehaviour
         var times = 3;
         _pickAxe.SetActive(true);
         _animator.SetTrigger(_miningHash);
-        await Task.Delay(times * 1000);
+        await Task.Delay(times * 1000+600);
         _pickAxe.SetActive(false);
         _animator.SetTrigger(_idleHash);
         await Task.Delay(1000);
